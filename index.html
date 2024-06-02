@@ -29,7 +29,9 @@
     <header class="page-header">
       <div class="container container-header">
         <nav class="sec-nav">
-          <a class="logo" href="">Web<span class="logo-black">Studio</span></a>
+          <a class="logo header" href=""
+            >Web<span class="logo-black">Studio</span></a
+          >
           <ul class="menu-nav">
             <li>
               <a class="link current" href="./index.html">Studio</a>
@@ -53,19 +55,144 @@
             </li>
           </ul>
         </address>
+
+        <button class="open-menu-btn" type="button">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
+
+      <!--#region mobile-menu-->
+      <div class="mobile-menu-window container">
+        <div class="mobile-menu-container">
+          <button class="mobile-menu-close-btn modal-close-btn" type="button">
+            <svg class="mobile-menu-icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link link current" href="">Studio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link link" href="">Portfolio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="mobile-contacts">
+            <ul class="mobile-contact-list">
+              <li class="mobile-contact-item">
+                <a
+                  class="mobile-contact-link link current"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-contact-item">
+                <a
+                  class="mobile-contact-link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mobile-menu-social-list">
+            <li class="mobile-menu-social-item social-item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="mobile-menu-social-link link"
+              >
+                <svg
+                  class="mobile-menu-icon-social"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mobile-menu-social-item social-item">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="mobile-menu-social-link link"
+              >
+                <svg
+                  class="mobile-menu-icon-social"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <use href="./images/icons.svg#icon-twiter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mobile-menu-social-item social-item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="mobile-menu-social-link link"
+              >
+                <svg
+                  class="mobile-menu-icon-social"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="mobile-menu-social-item social-item">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="mobile-menu-social-link link"
+              >
+                <svg
+                  class="mobile-menu-icon-social"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--#endregion mobile-modal-->
     </header>
 
     <main>
-      <!--Hero-->
+      <!--#region Hero-->
       <section class="sec-hero">
-        <div class="container">
+        <div class="container hero">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button">Order Service</button>
         </div>
       </section>
+      <!--#endregion Hero-->
 
-      <!--Feature-->
+      <!--#region Feature-->
       <section class="section sec-feature">
         <div class="container">
           <h2 class="visually-hidden">Feature</h2>
@@ -145,8 +272,9 @@
           </ul>
         </div>
       </section>
+      <!--#endregion Feature-->
 
-      <!--Our Team-->
+      <!--#region Our Team-->
       <section class="section sec-team">
         <div class="container">
           <h2 class="sec-team-title">Our Team</h2>
@@ -475,8 +603,9 @@
           </ul>
         </div>
       </section>
+      <!--#endregion Our Team-->
 
-      <!--Our Portfolio-->
+      <!--#region Our Portfolio-->
       <section class="section sec-portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
@@ -484,7 +613,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-1-banking-app.jpg"
+                  src="./images/portfolio-320/img-1.jpg"
                   alt="Examples of screen of banking app"
                   width="360"
                   height="300"
@@ -503,7 +632,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-2-cashless-payment.jpg"
+                  src="./images/portfolio-320/img-2.jpg"
                   alt="Cashless Payment with phone that scanning QR-code"
                   width="360"
                   height="300"
@@ -523,7 +652,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-3-meditation-app.jpg"
+                  src="./images/portfolio-320/img-3.jpg"
                   alt="Meditation App on the laptop and mobile phone"
                   width="360"
                   height="300"
@@ -543,7 +672,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-4-taxi-service.jpg"
+                  src="./images/portfolio-320/img-4.jpg"
                   alt="A man is driving car"
                   width="360"
                   height="300"
@@ -562,7 +691,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-5-screen-illustrations.jpg"
+                  src="./images/portfolio-320/img-5.jpg"
                   alt="Screen illustrations for phone"
                   width="360"
                   height="300"
@@ -581,7 +710,7 @@
             <li class="project-card">
               <div class="img-overlay-portfolio">
                 <img
-                  src="./images/portfolio-images/img-6-online-courses.jpg"
+                  src="./images/portfolio-320/img-6.jpg"
                   alt="A girl in an orange sweater with a mobile phone"
                   width="360"
                   height="300"
@@ -600,9 +729,10 @@
           </ul>
         </div>
       </section>
+      <!--#endregion Our Portfolio-->
     </main>
 
-    <!--Footer-->
+    <!--#region Footer-->
     <footer class="footer">
       <div class="container">
         <div class="section-logo-footer">
@@ -614,7 +744,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="social-media-footer">
+        <div class="section-social-footer">
           <p class="social-media-description">Social media</p>
           <ul class="footer-social-links">
             <li class="footer-social-item">
@@ -675,7 +805,7 @@
           </ul>
         </div>
 
-        <div class="footer-subscribe">
+        <div class="section-subscribe-footer">
           <p class="footer-subscribe-text">Subscribe</p>
           <form class="subscribe-form">
             <label class="subscribe-form-label"
@@ -695,6 +825,7 @@
         </div>
       </div>
     </footer>
+    <!--#endregion Footer-->
 
     <!-- MODAL OVERLAY add "is-open"-->
     <div class="modal-overlay">
