@@ -400,19 +400,21 @@ h3 {
     linear-gradient(to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)),
-    url(../images/hero.jpg);
+    url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-@media (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .sec-hero {
     background-image:
       linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
-      url(../images/hero@2.jpg);
+      url(../images/hero-mobile@2x.jpg);
   }
 }
 
@@ -464,6 +466,23 @@ h3 {
   .sec-hero {
     max-width: 768px;
     padding: 112px 204px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/hero-tablet.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 1157px),
+  screen and (min-resolution: 192dpi) and (max-width: 1157px),
+  screen and (min-resolution: 2dppx) and (max-width: 1157px) {
+    .sec-hero {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/hero-tablet@2x.jpg);
+    }
   }
 
   .container.hero {
@@ -480,6 +499,23 @@ h3 {
   .sec-hero {
     max-width: 1440px;
     padding: 188px 0;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/hero-desktop.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+  screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+    .sec-hero {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/hero-desktop@2x.jpg);
+    }
   }
 
   .container.hero {
