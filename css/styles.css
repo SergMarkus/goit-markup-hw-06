@@ -1349,4 +1349,12 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     width: 360px;
   }
 
-  /* #endregion Modal */
+  @media screen and (min-width: 1158px) {
+    .modal-overlay {
+      height: 676px;
+      padding-top: 80px;
+    }
+  }
+}
+
+/* #endregion Modal */
