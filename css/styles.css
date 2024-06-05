@@ -183,21 +183,45 @@ h3 {
   margin-right: 76px;
 }
 
-.mobile-menu-window.modal-overlay {
+/* .mobile-menu-window.modal-overlay {
   padding: 0;
+} */
+
+.mobile-menu-overlay {
+  position: fixed;
+  width: 100%;
+  height: 640px;
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.mobile-menu-container {
+/* .mobile-menu-overlay-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+} */
+
+.mobile-menu-modal {
+  position: relative;
   display: flex;
-  /* display: none; */
   flex-direction: column;
   padding: 72px 0 40px;
-  position: relative;
-}
-
-.mobile-menu-container.modal {
+  /* padding: 0 16px; */
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close-btn.modal-close-btn {
+  right: 8px;
 }
 
 .mobile-menu-nav {
@@ -392,7 +416,7 @@ h3 {
 .sec-hero {
   background: var(--navy-blue);
   max-width: 320px;
-  padding: 72px 52px;
+  padding: 72px 0;
   margin: auto;
   display: flex;
 
@@ -426,6 +450,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 }
 
 .hero-title {
+  width: 216px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -465,7 +490,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 @media screen and (min-width: 768px) {
   .sec-hero {
     max-width: 768px;
-    padding: 112px 204px;
+    padding: 112px 0;
     background-image:
       linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
@@ -490,6 +515,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   }
 
   .hero-title {
+    width: 496px;
     font-size: 56px;
     line-height: 1.07;
   }
@@ -688,8 +714,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 }
 
 @media screen and (min-width: 768px) {
+  .sec-team .container {
+    width: 584px;
+  }
+
   .team-cards {
-    margin: 0 92px;
     row-gap: 64px;
   }
 
@@ -701,6 +730,10 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 @media screen and (min-width: 1158px) {
   .sec-team {
     padding: 120px 0;
+  }
+
+  .sec-team .container {
+    width: 100%;
   }
 
   .team-cards {
@@ -766,6 +799,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 .name-project-card {
   margin-bottom: 8px;
+  text-align: start;
+}
+
+.project-card-text {
+  text-align: start;
 }
 
 @media screen and (min-width: 768px) {
@@ -806,15 +844,14 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   flex-direction: column;
   align-items: baseline;
   gap: 72px;
+  max-width: 1158px;
 
 }
 
 .section-logo-footer {
   display: flex;
-  max-width: 264px;
+  /* max-width: 264px; */
   flex-direction: column;
-  /* margin-bottom: 72px; */
-
 }
 
 .footer-logo {
@@ -961,10 +998,15 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0;
+    width: 584px;
   }
 
   .section-logo-footer {
-    margin-left: 92px;
+    max-width: 264px;
+  }
+
+  .footer-logo {
+    margin: 0 0 16px;
   }
 
   .section-social-footer {
@@ -975,7 +1017,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
   .section-subscribe-footer {
     margin-top: 72px;
-    padding-left: 92px;
   }
 
   .footer-subscribe-text {
@@ -1005,6 +1046,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
   .footer .container {
     flex-wrap: nowrap;
+    width: 1158px;
   }
 
   .section-logo-footer {
@@ -1052,9 +1094,9 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   top: 50%;
   left: 50%;
   width: 288px;
-  min-height: 623px;
+  height: 623px;
   border-radius: 4px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
   transform: translate(-50%, -50%);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -1079,7 +1121,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .modal-icon-close {
@@ -1210,7 +1251,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   margin: 0;
   border: none;
   display: flex;
-  justify-content: left;
   align-items: center;
   margin-bottom: 24px;
 }
@@ -1221,7 +1261,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate);
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .modal-link-policy {
@@ -1250,6 +1291,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   fill: #fff;
 }
 
+.checkbox-text {
+  display: inline-block;
+  width: 231px;
+}
+
 .modal-checkbox-input:checked+.modal-checkbox-label .checkbox-style {
   background-color: #404bbf;
   border: none;
@@ -1264,8 +1310,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: var(--iris);
-
-  /* cursor: pointer */
 
   font-weight: 500;
   font-size: 16px;
@@ -1297,13 +1341,12 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     min-height: 584px;
   }
 
-  .modal-form-checkbox {
-    margin-bottom: 16px;
+  .checkbox-text {
+
+    display: flex;
+
+    align-items: center;
+    width: 360px;
   }
 
-  .modal-form-checkbox {
-    margin-bottom: 24px;
-  }
-}
-
-/* #endregion Modal */
+  /* #endregion Modal */
